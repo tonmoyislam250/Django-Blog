@@ -1,0 +1,308 @@
+.add-ingredient {
+    font-size: 15px;
+    border-bottom: 1px dotted #56885d;
+    text-decoration: none;
+    color: #56885d;
+}
+
+.recipe-buttons {
+    text-decoration: none;
+    color: #ffffff;
+    background: #ff2a6b;
+}
+
+.edit {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.delete {
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    text-align: end;
+}
+
+.recipe-details-section {
+    min-height: 100vh;
+}
+
+.post-title {
+    background: #ff2a6b;
+    transform: scale(1.4);
+    transform: translate(0px, -40px);
+    width: 600px;
+    height: 90px;
+    text-align: center;
+
+    /* -webkit-box-shadow: -4px 10px 13px -6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: -4px 10px 13px -6px rgba(0, 0, 0, 0.3);
+    box-shadow: -4px 10px 13px -6px rgba(0, 0, 0, 0.3); */
+}
+
+.post-title h2 {
+    color: #ffffff;
+    transform: scale(1.1);
+    font-weight: 100;
+    vertical-align: baseline;
+}
+
+.vh100 {
+    min-height: 100vh;
+}
+
+.thumbnail {
+    width: 350px;
+    border-radius: px;
+}
+
+.pink {
+    background: #ff2a6b;
+}
+
+.transparent {
+    filter: opacity(1)
+}
+
+.btn.pink {
+    color: white;
+}
+
+.profile {
+    background: #eff3f7
+}
+
+.profile .recipe-filter-warp .filter-top .filter-top-text p {
+    font-size: 150%;
+}
+
+.in-search-span {
+    margin-right: 17px;
+    border-top-right-radius: .25rem !important;
+    border-bottom-right-radius: .25rem !important;
+}
+
+.btn-native {
+    color: #fff;
+    background: #ff2a6b;
+    border-color: #ff2a6b;
+}
+
+.btn-native-outline {
+    color: #ff2a6b;
+    background-color: transparent;
+    background-image: none;
+    border-color: #ff2a6b;
+}
+
+.btn-native-outline:hover {
+    color: #fff;
+    background-color: #ff2a6b;
+    border-color: #ff2a6b;
+}
+
+.recipe .recipe-info-warp {
+    width: 80%;
+}
+
+
+/* HEADER TOP */
+.header-top {
+    background: linear-gradient(90deg, #333, #555);
+    padding: 10px 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.header-top .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* USER PANEL */
+.user-panel {
+    display: flex;
+    gap: 15px;
+}
+
+.user-panel a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.user-panel a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.authenticated .profile-link,
+.authenticated .write-link,
+.authenticated .admin-link {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.register-link,
+.login-link {
+    background-color: #ffc107;
+    color: #333;
+    font-weight: bold;
+}
+
+.register-link:hover,
+.login-link:hover {
+    background-color: #ffeb3b;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(50, 50, 50, 0.6);
+    border-radius: 15px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar:hover {
+    background: rgba(50, 50, 50, 0.9);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+    margin-left: 30px;
+}
+
+.navbar-brand img {
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
+}
+
+/* Navbar Links */
+.nav-link {
+    font-size: 16px;
+    font-weight: 600;
+    color: #bbb;
+    transition: color 0.3s ease-in-out;
+    margin-right: 15px;
+}
+
+.nav-link:last-child {
+    margin-right: 0;
+}
+
+.nav-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Search Form */
+.header-search {
+    display: flex;
+    align-items: center;
+}
+
+.header-search input {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px 0 0 15px;
+    background-color: rgba(50, 50, 50, 0.7);
+    padding: 8px 12px;
+    width: 200px;
+    color: #fff;
+    outline: none;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.header-search input:focus {
+    background-color: white;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+}
+
+.header-search button {
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 0 15px 15px 0;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.header-search button:hover {
+    background-color: #0056b3;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+}
+
+.navbar-toggler-icon {
+    filter: invert(50%);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .header-search input {
+        width: 100%;
+    }
+
+    .navbar-collapse {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+/* Dark background for the whole page */
+body {
+    background-color: #141414;
+    /* Dark background */
+    color: #fff;
+    /* Light text color */
+}
+
+/* Dark background for hero section */
+.hero-section {
+    background-color: #222;
+    /* Darken the hero section background */
+}
+
+/* Dark background for the add section */
+.add-section {
+    background-color: #1f1f1f;
+    /* Darker background for the add section */
+}
+
+/* Darken the recipes section */
+.recipes-section {
+    background-color: #181818;
+    /* Darker background for recipes */
+}
+
+/* Darken the gallery section */
+.gallery {
+    background-color: #222;
+    /* Dark background for the gallery */
+}
+
+.gallery-slider .gs-item {
+    background-color: #333;
+    /* Darker item background */
+}

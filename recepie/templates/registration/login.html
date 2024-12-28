@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+<div class="vh100 d-flex justify-content-center align-items-center" style="background-color: #141414;">
+  <div class="login-container bg-black text-white p-5 rounded shadow-lg">
+    <h2 class="text-center mb-4">Login</h2>
+
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <label>
+        <input type="checkbox" onclick="togglePassword()"> Show Password
+      </label>
+
+      <script type="text/javascript">
+        function togglePassword() {
+          var password1 = document.getElementById('password1');
+          if (password1.type === "password") {
+            password1.type = "text";
+          } else {
+            password1.type = "password";
+          }
+        }
+      </script>
+      <div class="d-flex flex-column">
+        <button class="btn btn-danger mb-3" type="submit">Login</button>
+        <a class="text-center mb-3 text-white" href="{% url 'reset_password' %}">Forgotten password?</a>
+      </div>
+    </form>
+<p class="text-center mt-3">Don't have an account? <a href="{% url 'Signup' %}">Register here</a></p>
+    <!-- <div class="text-center">
+      <p class="text-muted">or</p>
+      <a class="btn btn-outline-light mb-2" href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a><br>
+      <a class="btn btn-outline-light mb-2" href="{% url 'social:begin' 'github' %}">Login with GitHub</a><br>
+      <a class="btn btn-outline-light mb-2" href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a><br>
+    </div> -->
+  </div>
+</div>
+{% endblock %}

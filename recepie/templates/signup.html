@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Signup{% endblock %}
+
+{% block body %}
+<div class="container vh100 d-flex justify-content-center align-items-center" style="background-color: #141414;">
+  <div class="signup-box bg-black text-white p-5 rounded shadow-lg w-100">
+    <h2 class="text-center mb-4">Create Account</h2>
+
+    <!-- <div class="social-login-buttons mb-4">
+      <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-danger w-100 mb-3">Login with Google</a>
+      <a href="{% url 'social:begin' 'github' %}" class="btn btn-dark w-100 mb-3">Login with GitHub</a>
+      <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-primary w-100 mb-3">Login with Facebook</a>
+    </div> -->
+
+    <form method="post" enctype="multipart/form-data" class="signup-form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      {{ extended_user_form.as_p }}
+      <!-- Checkbox to show/hide password -->
+      <label>
+        <input type="checkbox" onclick="togglePassword()"> Show Password
+      </label>
+
+      <script type="text/javascript">
+        function togglePassword() {
+          var password1 = document.getElementById('password1');
+          var password2 = document.getElementById('password2');
+          if (password1.type === "password") {
+            password1.type = "text";
+            password2.type = "text";
+          } else {
+            password1.type = "password";
+            password2.type = "password";
+          }
+        }
+      </script>
+      <button class="btn btn-danger w-100" type="submit">Signup</button>
+    </form>
+  </div>
+  <p class="text-center mt-3">Already have an account? <a href="{% url 'Login' %}">Login</a></p>
+</div>
+{% endblock %}
